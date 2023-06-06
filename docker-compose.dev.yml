@@ -1,0 +1,12 @@
+
+version: '3'
+
+services:
+  token-server:
+    image: azhen0803/alitoken-server:1.5
+    restart: always
+    container_name: token-server
+    environment:
+      RUST_LOG: "info"
+    ports:
+      - "8080:8080"
